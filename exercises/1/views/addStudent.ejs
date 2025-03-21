@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    
+    <h1>ADD A STUDENT</h1>
+    <form action="/students" method="post">
+        <input type="text" placeholder="reg_number" name="reg_nbr">
+        <input type="text" placeholder="name" name="name">
+        <input type="text" placeholder="serial number" name="serial_nbr">
+        <button type="submit">SEND</button>
+    </form>
+
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

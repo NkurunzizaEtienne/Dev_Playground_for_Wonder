@@ -1,3 +1,3 @@
-"node_modules/" 
-".env" 
-"etienne.txt" 
+.env
+.env.local
+.env.production

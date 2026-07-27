@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: hsl(200,80%,40%);
+    /* font-family: 'poppins', sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: hsl(5,80%,50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 20px 3px rgba(0,0,0,0.9);
+}
+.container:hover{
+    border-radius: 20px;
+
+}
+.container:hover .bottle img{
+    transform: scale(2.4) rotate(25deg);
+
+}
+.container:hover .para{
+    transform: scale(1);
+    opacity: 1;
+
+}
+.container:hover #logo{
+    transform: scale(0);
+    opacity: 0;
+
+}
+
+.container #logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+    
+
+
+}
+.container .para{
+    width: 40%;
+    /* background: blueviolet; */
+    margin: 1em;
+    padding: 1em;
+    /* font-size: 1.3rem; */
+    transition: .5s ease-in-out;
+    transform: scale(0);
+    /* box-shadow: 0 0 20px 3px rgba(0,0,0,0.9); */
+
+}
+.para p{
+    margin-top: 1em;
+    font-weight: 600;
+    text-align: justify;
+
+
+}
+.para h1{
+    font-weight: bold;
+    text-align: center;
+
+}
+.para .btn{
+    padding: 1em;
+    margin: 1em 0;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    background: hsl(200,80%,40%);
+    border: none;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.para .btn:hover{
+    transform: translateY(-4px);
+}
+.bottle{
+    /* background: yellowgreen; */
+    width: 30%;
+}
+.bottle img{
+    width: 100%;
+    transition: .5s ease-in-out;
+    transform: scale(0);
+    filter: drop-shadow(8px 13px 2px rgba(0,0,0,0.8));
+    transition-delay: .5s;
+
+}
+/* #pic:hover{
+    transform: scale(2.4) rotate(60deg);
+} */
+
+@media all and (max-width: 410px){
+    .container{
+
+        width: 250px;
+        height: 250px;
+        /* padding: 1em .5em; */
+    }
+    .para{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: .7rem;
+
+    }
+
+}
+

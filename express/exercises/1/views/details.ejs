@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('./partials/head.ejs') %>
+<body>
+    <%-include('./partials/nav.ejs') %>
+    <h1><%= info.name%>
+        <h2>The REGISTRATION NUMBER:<span><%= info.reg_nbr %></span></h2>
+        <h2>COMPUTER'S INFO</h2>
+        <p>Serial Number: <%= info.serial_nbr %></p>
+        <h3><%= info.name %>'s Behaviours</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis <br> labore ut iste unde ducimus. Omnis similique doloremque earum nostrum <br> nemo delectus explicabo itaque commodi tenetur voluptatem. Ipsa harum culpa vel.</p>
+
+
+        <h3>Added at: <%= info.createdAt %></h3>
+        <button class="delete" data-id=<%= info._id %>>DELETE THIS STUDENT</button>
+    
+    <%-include('./partials/footer.ejs') %>
+
+    <script> 
+    
+           const del = document.querySelector('.delete');
+           del.addEventListener('click', ()=>{
+            const endpoint = `/students/${del.dataset.id}`;
+            const options = {
+                method: 'DELETE'
+            };
+            const sendReq = fetch(endpoint, options);
+            sendReq.then(response => response.json())
+            .then(data => window.location.href = data.go)
+            .catch(err => console.log(err));
+           });
+    </script>
+</body>
+</html>

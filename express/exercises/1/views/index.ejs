@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    
+    <H1>OUR~STUDENTS</H1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis possimus eveniet fugit facilis <br> Autem, tempora delectus! Dignissimos reiciendis vitae beatae <br>facilis cupiditate quidem mollitia nam, saepe qui veniam atque?</p>
+    
+    <% students.forEach(student =>{ %>
+        <div class="studentInfo">
+        <a href="/students/<%= student._id %>">
+            <h1><%= student.name %></h1>
+        <p><%= student.serial_nbr %></p>
+        </a>
+    </div>
+        <% }) %>
+    
+</body>
+</html>

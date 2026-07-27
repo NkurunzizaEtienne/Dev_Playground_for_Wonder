@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins", sans-serif;
+    background: #888;
+}
+header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 50px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2em;
+    position: relative;
+    z-index: 100;
+}
+header h2{
+    color: rgb(85, 248, 85);
+    
+}
+header ul{
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    
+}
+header li{
+    margin-inline: 2em;
+    list-style: none;
+    color: #fff;
+}
+header a{
+    text-decoration: none;
+}
+header svg{
+    width: 25px;
+    color: #fff;
+}
+
+/* slider section */
+
+.slider{
+    position: relative;
+    margin-top: -50px;
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+.slider .theme {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+    opacity: 0;
+    transition: 1s;
+
+}
+.slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, black 10%, transparent);
+
+}
+.slider .theme.active{
+    opacity: 1;
+}
+.slider .theme img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.slider .content{
+    position: absolute;
+    z-index: 10;
+    top: 20%;
+    left: 10%;
+}
+.slider .content h1{
+    font-size: 4em;
+    color: #fff;
+    font-weight: bold;
+}
+.slider .content h2{
+    font-size: 2em;
+    color: #999;
+    font-weight: bold;
+}
+.slider .content p{
+    font-size: .9em;
+    color: #fff;
+    
+}
+.slider .content button{
+    padding: 1.2em;
+    margin-block: 1em;
+    font-weight: bold;
+    color: #030202;
+    background: rgb(85, 248, 85);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px white;    
+}
+/* annimation stuff */
+.slider .content h1,
+.slider .content h2,
+.slider .content p,
+.slider .content button{
+    transform: translateY(70px);
+    filter: blur(1);
+    opacity: 0;
+}
+.slider .content h1{
+    animation: showContent 1s forwards;
+    animation-delay: .3s;
+}
+.slider .content h2{
+    animation: showContent 1s forwards;
+    animation-delay: .6s;
+}
+.slider .content p{
+    animation: showContent 1s forwards;
+    animation-delay: .9s;
+}
+.slider .content button{
+    animation: showContent 1s forwards;
+    animation-delay: 1.2s;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.thumbnails{
+    position: absolute;
+    z-index: 10;
+    left: 45%;
+    bottom: 10%;
+    height: 200px;
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    overflow: auto;
+
+}
+.thumbnails::-webkit-scrollbar{
+    width: 0;
+}
+.thumbnails .thumbnail{
+    width: 150px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;  
+    filter: brightness(.5);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.thumbnails .thumbnail img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.thumbnails .thumbnail.active{
+    filter: brightness(1);
+}
+.movebtns {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+#prev, #next {
+    background: rgb(85, 248, 85);
+    color: #fff;
+    font-size: 2em;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;  /* This should work */
+    z-index: 10;      /* Ensure they are above other elements */
+}
+
+@media (max-width: 640px){
+    .movebtns{
+        position: absolute;
+        top: 10%;
+        right: 10%;
+    }
+}
+@media (min-width: 640px){
+    .slider .content{
+        width: 40%;
+    }
+}

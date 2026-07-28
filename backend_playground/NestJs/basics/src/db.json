@@ -1,0 +1,22 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "address": "42 Rugarama Street, Kigali",
+      "price": 185000,
+      "bedrooms": 3
+    },
+    {
+      "id": 2,
+      "address": "17 Kacyiru Ave, Kigali",
+      "price": 240000,
+      "bedrooms": 4
+    },
+    {
+      "id": 3,
+      "address": "9 Nyarutarama Rd, Kigali",
+      "price": 310000,
+      "bedrooms": 5
+    }
+  ]
+}

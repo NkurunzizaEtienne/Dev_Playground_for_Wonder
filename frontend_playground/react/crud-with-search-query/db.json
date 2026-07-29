@@ -1,0 +1,32 @@
+{
+  "contacts": [
+    {
+      "id": "2",
+      "name": "Daniel Cho",
+      "role": "Product Designer",
+      "email": "daniel.cho@acme.com",
+      "phone": "+1 (212) 555-0143"
+    },
+    {
+      "id": "3",
+      "name": "Aisha Bello",
+      "role": "Account Manager",
+      "email": "aisha.bello@acme.com",
+      "phone": "+1 (312) 555-0198"
+    },
+    {
+      "name": "nkurunziza bebe",
+      "role": "Data analyst",
+      "email": "enkurunziza@gmail.com",
+      "phone": "+1 (555) 213-3231",
+      "id": "-1MSiMd"
+    },
+    {
+      "name": "John Jackson",
+      "role": "IT Manager",
+      "email": "jack@gmail.com",
+      "phone": "323213213123",
+      "id": "zFGZVCI"
+    }
+  ]
+}

@@ -9,12 +9,11 @@ export class PropertyService {
     getOne(id : string){
         return `your id is: ${id}`
     }
-    create(createPropertyDto: CreatePropertyDto) {
-    return {
-        ...createPropertyDto,
-        id: Date.now()
-
-
-    };
-}
+    create(body: CreatePropertyDto) {
+        const newPost = {
+            id: Date.now(),
+            ...body,
+        }
+        return newPost
+    }
 }

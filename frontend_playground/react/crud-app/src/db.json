@@ -1,0 +1,34 @@
+{
+  "devices": [
+    {
+      "name": "Samsung Galaxy",
+      "price": 2001,
+      "category": "Smart phne",
+      "id": "3fc8"
+    },
+    {
+      "id": "3718",
+      "name": "iPhone pro max",
+      "category": "phone ",
+      "price": "30000"
+    },
+    {
+      "id": "4607",
+      "name": "kindo",
+      "category": "speaker",
+      "price": "233"
+    },
+    {
+      "id": "d338",
+      "name": "GBL",
+      "category": "head phones",
+      "price": "212"
+    },
+    {
+      "id": "7d2f",
+      "name": "GBL 12",
+      "category": "Radio",
+      "price": "12000"
+    }
+  ]
+}

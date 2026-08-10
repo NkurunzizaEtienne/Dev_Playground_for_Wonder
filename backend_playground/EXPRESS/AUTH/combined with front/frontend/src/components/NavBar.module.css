@@ -1,0 +1,31 @@
+a{
+    text-decoration: none;
+    color: #7d7a7a;
+  }
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 1em;
+  }
+  .nav h2{
+    color: #b1b1b1;
+  }
+  .nav ul{
+    display: flex;
+    gap: 1em;
+    
+  }
+  .nav li{
+    list-style: none;
+  }
+  .auth{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+  }
+  .auth h3{
+    color: #b1b1b1;
+    font-weight: 100;
+    cursor: pointer;
+  }

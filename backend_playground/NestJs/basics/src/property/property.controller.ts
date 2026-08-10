@@ -15,12 +15,10 @@ export class PropertyController {
         return this.propertyService.getOne(id)
     }
     @Post()
-    @UsePipes(new ValidationPipe({ whitelist:true, forbidNonWhitelisted:true, groups:['create'], always:true}))
     create(@Body() body: UserDto) {
         return this.propertyService.create(body)
     }
     @Patch()
-    @UsePipes(new ValidationPipe({ whitelist:true, forbidNonWhitelisted:true, groups:['update'], always:true}))
     update(@Body() body: UserDto){
         return this.propertyService.update(body)
     }

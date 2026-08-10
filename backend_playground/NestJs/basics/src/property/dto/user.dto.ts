@@ -6,7 +6,6 @@ export class UserDto {
     address!: string
 
     @IsInt()
-    @IsPositive({groups: ['update'], message: "the price is not positive"})
     price!: number
 
     @IsInt()

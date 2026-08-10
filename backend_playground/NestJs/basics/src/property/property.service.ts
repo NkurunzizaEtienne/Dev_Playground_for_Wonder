@@ -1,6 +1,5 @@
 import { Injectable, Param, ParseIntPipe } from '@nestjs/common';
-import { CreatePropertyDto } from './dto/createProperty.dto';
-
+import { UserDto } from './dto/user.dto';
 @Injectable()
 export class PropertyService {
     getALL(){
@@ -9,11 +8,14 @@ export class PropertyService {
     getOne(id : string){
         return `your id is: ${id}`
     }
-    create(body: CreatePropertyDto) {
+    create(body: UserDto) {
         const newPost = {
             id: Date.now(),
             ...body,
         }
         return newPost
+    }
+    update(body: UserDto){
+        return body
     }
 }

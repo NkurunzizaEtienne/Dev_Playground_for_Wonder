@@ -1,7 +1,9 @@
 import { Body, Controller, Get, Param, Patch, Post, UsePipes, ValidationPipe } from '@nestjs/common';
 import { PropertyService } from './property.service'
 import { UserDto } from './dto/user.dto';
-import { IdDto } from './dto/id.dto';
+import { ParseIdPipe } from './CustomPipe/IdPipe';
+
+
 
 @Controller('property')
 export class PropertyController {
@@ -20,8 +22,9 @@ export class PropertyController {
         return this.propertyService.create(body)
     }
     @Patch(':id')
-    update(@Body() body: UserDto, 
-    @Param() param:IdDto) {
+    update(@Body() body: UserDto,
+    @Param('id', ParseIdPipe) id
+    ) {
         return this.propertyService.update(body)
     }
 }

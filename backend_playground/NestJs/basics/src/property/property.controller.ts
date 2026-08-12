@@ -1,6 +1,7 @@
 import { Body, Controller, Get, Param, Patch, Post, UsePipes, ValidationPipe } from '@nestjs/common';
 import { PropertyService } from './property.service'
 import { UserDto } from './dto/user.dto';
+import { IdDto } from './dto/id.dto';
 
 @Controller('property')
 export class PropertyController {
@@ -18,8 +19,9 @@ export class PropertyController {
     create(@Body() body: UserDto) {
         return this.propertyService.create(body)
     }
-    @Patch()
-    update(@Body() body: UserDto){
+    @Patch(':id')
+    update(@Body() body: UserDto, 
+    @Param() param:IdDto) {
         return this.propertyService.update(body)
     }
 }
